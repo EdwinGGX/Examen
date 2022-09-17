@@ -1,0 +1,15 @@
+C:\Users\escob\Desktop\Visual Code\bin\Debug\net6.0\Visual Code.exe
+C:\Users\escob\Desktop\Visual Code\bin\Debug\net6.0\Visual Code.deps.json
+C:\Users\escob\Desktop\Visual Code\bin\Debug\net6.0\Visual Code.runtimeconfig.json
+C:\Users\escob\Desktop\Visual Code\bin\Debug\net6.0\Visual Code.dll
+C:\Users\escob\Desktop\Visual Code\bin\Debug\net6.0\Visual Code.pdb
+C:\Users\escob\Desktop\Visual Code\obj\Debug\net6.0\Visual Code.csproj.AssemblyReference.cache
+C:\Users\escob\Desktop\Visual Code\obj\Debug\net6.0\Visual Code.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\escob\Desktop\Visual Code\obj\Debug\net6.0\Visual Code.AssemblyInfoInputs.cache
+C:\Users\escob\Desktop\Visual Code\obj\Debug\net6.0\Visual Code.AssemblyInfo.cs
+C:\Users\escob\Desktop\Visual Code\obj\Debug\net6.0\Visual Code.csproj.CoreCompileInputs.cache
+C:\Users\escob\Desktop\Visual Code\obj\Debug\net6.0\Visual Code.dll
+C:\Users\escob\Desktop\Visual Code\obj\Debug\net6.0\refint\Visual Code.dll
+C:\Users\escob\Desktop\Visual Code\obj\Debug\net6.0\Visual Code.pdb
+C:\Users\escob\Desktop\Visual Code\obj\Debug\net6.0\Visual Code.genruntimeconfig.cache
+C:\Users\escob\Desktop\Visual Code\obj\Debug\net6.0\ref\Visual Code.dll
