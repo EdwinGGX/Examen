@@ -1,79 +1,40 @@
 ﻿using System;
-					
-public class Program
+using System.IO;
+
+public class progam
 {
-	public static void Main()
-	{
-        int np;
-        int opc;
-        string xd="";
-        opc=0;
-        int tam;
-        Console.WriteLine("¿Cuantas posiciones desea que tenga el arreglo?");
-        np = Convert.ToInt32(Console.ReadLine());
-        tam = np;
-        int[] list = new int[tam];
+    public static void Main (){
+        FileStream filestream = new FileStream("myfile.txt", FileMode.Create);
+        var streamwriter = new StreamWriter(filestream);
+        streamwriter.AutoFlush = true;
+       Console.SetOut(streamwriter);
+       
+    
+        double cont;
+        int i;
+        int j;
+        double[,] matrix = new double[10,10];
+       
+        cont = 0;
 
-        do
-        {
-            Console.Clear();
-            Console.WriteLine("MENU DE ARREGLOS UNIDIMENSIONALES");
-            Console.WriteLine("1. Ingresar valores al arreglo");
-            Console.WriteLine("2. Imprimir arreglo elevado al cuadrado");
-            Console.WriteLine("3. Imprimir los números primos");
-            Console.WriteLine("4. Salir");
+        for (i=1;i<=10;i++) {
 
-            Console.WriteLine("Ingresar opcion del menu: ");
-            opc = Convert.ToInt32(Console.ReadLine());
-
-            switch (opc)
-            {
-                case 1:
-                    Console.WriteLine("Ingresando valores al arreglo");
-                    for (int i = 0; i < list.Length; i++)
-                    {
-                        Console.WriteLine("Ingrese un numero para la posición " + i);
-                        list[i]=Convert.ToInt32(Console.ReadLine());     
-                    }
-                    break;
-                case 2:
-                    Console.WriteLine("Valores elevados al cuadrado");
-                    for (int i=1; i<=list.Length;i++){
-                        Console.WriteLine("Número: " +list[i-1]+", elevado al cuadrado: "+Math.Pow(list[i-1],2));
-                    }
-
-                    break;
-                case 3:
-                        xd=""; 
-                        Console.WriteLine("Resumen de los numeros primos");
-                        for (int i = 0; i < list.Length; i++)
-                        {
-                            if(EsPrimo(list[i]))
-                            {
-                                xd = ((i==list.Length-1) ? (xd + list[i].ToString()) : (xd + list[i] + ",")); 
-                            }
-                        }
-                        Console.WriteLine("Resumen: " + xd);
-
-                    break;
-
-                case 4:
-                    Console.WriteLine("Adios xD");
-                    break;
-                default:
-                    Console.WriteLine("Intente nuevamente");
-                    break;
-            }
-            Console.ReadKey();
-        } while (opc!=4);
-         static bool EsPrimo(int numero)
-        {
-            for (int i = 2; i < numero; i++)
-            {
-                if((numero % i) == 0){
-                    return false;
-                }
-            }return true;
+            matrix[0,i-1] = cont;
+            matrix[i-1,0] = cont;
+            cont = cont+1;
     }
-  }
+        for (i=2;i<=10;i++) {
+             for (j=2;j<=10;j++) {
+                 matrix[i-1,j-1] =  matrix[i-1,0]*matrix[0,j-1];
+       }
+    }   
+       for (i=1;i<=10;i++) {
+             for (j=1;j<=10;j++) {
+                Console.Write(matrix[i-1,j-1]+" ");
+       }
+       Console.WriteLine(" ");
+    }
+ 
+    }
+
 }
